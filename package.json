@@ -1,5 +1,5 @@
 {
-  "name": "adminjs-custom",
+  "name": "adminjs",
   "version": "5.0.1",
   "description": "Admin panel for apps written in node.js",
   "main": "index.js",
