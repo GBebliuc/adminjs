@@ -269,10 +269,8 @@ export class ViewHelpers {
    */
   assetPath(asset: string): string {
     if (this.options.assetsCDN) {
-      const url = new URL(asset, this.options.assetsCDN).href
-
       // adding timestamp to the href invalidates the CDN cache
-      return `${url}?date=${runDate.getTime()}`
+      return `${this.options.assetsCDN}${asset}?date=${runDate.getTime()}`
     }
     return this.urlBuilder(['frontend', 'assets', asset])
   }
